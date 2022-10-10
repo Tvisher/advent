@@ -736,7 +736,7 @@ button {
 .cards__item.coming .right-line,
 .cards__item.coming .bottom-line {
   position: absolute;
-  z-index: 3;
+  z-index: 6;
 }
 
 .cards__item.coming .left-line {
@@ -839,7 +839,7 @@ button {
 .cards__item.current .bottom-line {
   background-color: #fff;
   position: absolute;
-  z-index: 3;
+  z-index: 6;
 }
 
 .cards__item.current .left-line {
