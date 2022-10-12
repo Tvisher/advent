@@ -375,10 +375,7 @@ button {
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
-}
-
-.cards__item:hover {
-  box-shadow: 0px 4px 15px rgba(26, 27, 32, 0.55);
+  box-shadow: 0px 4px 15px rgba(26, 27, 32, 0.15);
 }
 
 .cards__item:nth-of-type(1) {
@@ -589,51 +586,61 @@ button {
 .cards__item:nth-of-type(2) .cards__item-content:before {
   background-image: url(../img/heart-2.png);
   background-position: center bottom;
+  background-size: 110%;
 }
 
 .cards__item:nth-of-type(3) .cards__item-content:before {
   background-image: url(../img/heart-3.png);
   background-position: 63% 82%;
+  background-size: 37%;
 }
 
 .cards__item:nth-of-type(5) .cards__item-content:before {
   background-image: url(../img/heart-5.png);
   background-position: center 91%;
+  background-size: 100%;
 }
 
 .cards__item:nth-of-type(6) .cards__item-content:before {
   background-image: url(../img/heart-6.png);
   background-position: 10% 90%;
+  background-size: 60%;
 }
 
 .cards__item:nth-of-type(9) .cards__item-content:before {
   background-image: url(../img/heart-9.png);
   background-position: 84% 88%;
+  background-size: 55%;
 }
 
 .cards__item:nth-of-type(10) .cards__item-content:before {
   background-image: url(../img/heart-10.png);
   background-position: 63% 85%;
+  background-size: 85%;
 }
 
 .cards__item:nth-of-type(16) .cards__item-content:before {
   background-image: url(../img/heart-16.png);
   background-position: 111% 66%;
+  background-size: 85%;
 }
 
 .cards__item:nth-of-type(18) .cards__item-content:before {
   background-image: url(../img/heart-18.png);
   background-position: 75% 100%;
+  background-size: 80%;
 }
 
 .cards__item:nth-of-type(19) .cards__item-content:before {
   background-image: url(../img/heart-19.png);
   background-position: 84% 127%;
+  background-size: 60%;
 }
 
 .cards__item:nth-of-type(21) .cards__item-content:before {
   background-image: url(../img/heart-21.png);
   background-position: 100% 78%;
+  background-size: 60%;
 }
 
 .cards__item .top-line,
@@ -703,10 +710,11 @@ button {
   line-height: 110%;
   color: #2e578c;
   margin-right: 8px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .cards__item .cards__item-winner {
+  max-width: 100%;
+  word-break: break-all;
   position: relative;
   z-index: 5;
   font-weight: 700;
@@ -714,7 +722,6 @@ button {
   line-height: 110%;
   text-transform: uppercase;
   color: #2e578c;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   padding-bottom: 4px;
 }
 
@@ -773,6 +780,7 @@ button {
   bottom: 0;
   left: 0;
   background: linear-gradient(275deg, rgb(232, 52, 111) 0%, rgb(248, 165, 1) 100%);
+  opacity: 1;
 }
 
 .cards__item.coming .top-line {
