@@ -869,6 +869,10 @@ button {
   background-image: url(../img/card-20.svg);
 }
 
+.cards__item.coming:nth-of-type(19) .cards__item-images {
+  background-image: url(../img/card-19-1.svg);
+}
+
 .cards__item.current .cards__item-number {
   color: #fff;
 }

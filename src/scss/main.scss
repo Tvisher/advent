@@ -629,6 +629,10 @@ li {
   &:nth-of-type(20) .cards__item-images {
     background-image: url(../img/card-20.svg);
   }
+
+  &:nth-of-type(19) .cards__item-images {
+    background-image: url(../img/card-19-1.svg);
+  }
 }
 
 .cards__item.current {
