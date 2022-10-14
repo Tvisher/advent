@@ -736,7 +736,7 @@ button {
 .cards__item .item-content__wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
 }
 
@@ -760,7 +760,7 @@ button {
   line-height: 110%;
   text-transform: uppercase;
   color: #2e578c;
-  padding-bottom: 4px;
+  padding-top: 6px;
 }
 
 .cards__item:nth-of-type(19) .item-content__wrapper,
@@ -1128,6 +1128,7 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(298.84deg, #e9366e 20.71%, #f29a0b 90.54%);
 }
 
 .modal-content.has-image .modal-content__image .image-container img {
