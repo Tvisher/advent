@@ -121,19 +121,44 @@ li {
 
 .main-content {
   padding-top: 36px;
-  &:before {
+  .bg-images {
     z-index: -1;
     position: fixed;
-    content: "";
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    background-image: url("../img/bgi.svg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    background: linear-gradient(121.8deg, #013c8f 14.62%, #0085ff 128.06%);
   }
+}
+
+.tr {
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 27.5vw;
+  height: 19.8vw;
+}
+.tl {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 17.9vw;
+  height: 24.5vw;
+}
+.br {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 7.7vw;
+  height: 13.7vw;
+}
+.bl {
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 13.6vw;
+  height: 21.26vw;
 }
 
 .logo {
@@ -166,6 +191,18 @@ li {
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
   box-shadow: 0px 4px 15px rgba(26, 27, 32, 0.15);
+  .cards__item-images:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 45, 93, 0.25);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
   // &:hover {
   //   box-shadow: 0px 4px 15px rgba(26, 27, 32, 0.55);
   // }
@@ -441,11 +478,16 @@ li {
     top: 0;
     left: 0;
   }
+  // &:hover {
+  //   .top-line,
+  //   .left-line,
+  //   .right-line,
+  //   .bottom-line {
+  //     opacity: 1;
+  //   }
+  // }
   &:hover {
-    .top-line,
-    .left-line,
-    .right-line,
-    .bottom-line {
+    .cards__item-images::after {
       opacity: 1;
     }
   }
@@ -550,13 +592,11 @@ li {
     );
   }
 
-  &:hover {
-    .top-line,
-    .left-line,
-    .right-line {
-      opacity: 1;
-    }
-  }
+  // &:hover {
+  //   &::after {
+  //     opacity: 1;
+  //   }
+  // }
 
   &:nth-of-type(2) .cards__item-images {
     background-image: url(../img/card-2.svg);
@@ -637,7 +677,7 @@ li {
     top: 0;
     left: 0;
   }
-  &:hover {
+  &.active {
     .top-line,
     .left-line,
     .right-line,
@@ -698,6 +738,12 @@ li {
   &:nth-of-type(21) .cards__item-images {
     background-image: url(../img/card-21-3.svg);
   }
+
+  &:hover {
+    .cards__item-images::after {
+      opacity: 0;
+    }
+  }
 }
 
 .cards__item-images {
@@ -707,8 +753,6 @@ li {
   left: -1px;
   bottom: -1px;
   right: -1px;
-  // width: 100%;
-  // height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

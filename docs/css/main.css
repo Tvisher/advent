@@ -331,18 +331,46 @@ button {
   padding-top: 36px;
 }
 
-.main-content:before {
+.main-content .bg-images {
   z-index: -1;
   position: fixed;
-  content: "";
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  background-image: url("../img/bgi.svg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+  background: linear-gradient(121.8deg, #013c8f 14.62%, #0085ff 128.06%);
+}
+
+.tr {
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 27.5vw;
+  height: 19.8vw;
+}
+
+.tl {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 17.9vw;
+  height: 24.5vw;
+}
+
+.br {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 7.7vw;
+  height: 13.7vw;
+}
+
+.bl {
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 13.6vw;
+  height: 21.26vw;
 }
 
 .logo {
@@ -376,6 +404,19 @@ button {
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
   box-shadow: 0px 4px 15px rgba(26, 27, 32, 0.15);
+}
+
+.cards__item .cards__item-images:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 45, 93, 0.25);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .cards__item:nth-of-type(1) {
@@ -688,10 +729,7 @@ button {
   left: 0;
 }
 
-.cards__item:hover .top-line,
-.cards__item:hover .left-line,
-.cards__item:hover .right-line,
-.cards__item:hover .bottom-line {
+.cards__item:hover .cards__item-images::after {
   opacity: 1;
 }
 
@@ -791,12 +829,6 @@ button {
   background: linear-gradient(275deg, rgb(232, 52, 111) 0%, rgb(248, 165, 1) 100%);
 }
 
-.cards__item.coming:hover .top-line,
-.cards__item.coming:hover .left-line,
-.cards__item.coming:hover .right-line {
-  opacity: 1;
-}
-
 .cards__item.coming:nth-of-type(2) .cards__item-images {
   background-image: url(../img/card-2.svg);
 }
@@ -890,10 +922,10 @@ button {
   left: 0;
 }
 
-.cards__item.current:hover .top-line,
-.cards__item.current:hover .left-line,
-.cards__item.current:hover .right-line,
-.cards__item.current:hover .bottom-line {
+.cards__item.current.active .top-line,
+.cards__item.current.active .left-line,
+.cards__item.current.active .right-line,
+.cards__item.current.active .bottom-line {
   opacity: 1;
 }
 
@@ -963,6 +995,10 @@ button {
 
 .cards__item.current:nth-of-type(21) .cards__item-images {
   background-image: url(../img/card-21-3.svg);
+}
+
+.cards__item.current:hover .cards__item-images::after {
+  opacity: 0;
 }
 
 .cards__item-images {
